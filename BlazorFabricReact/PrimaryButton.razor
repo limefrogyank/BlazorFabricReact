@@ -1,11 +1,13 @@
-﻿@inject Microsoft.JSInterop.IJSRuntime  JSRuntime
+﻿@using Microsoft.JSInterop
+@inject IJSRuntime  JSRuntime
 
 <div ref="buttonRef"></div>
 
 @functions{
-    ElementRef buttonRef;
+        ElementRef buttonRef;
+        ButtonProps buttonProps;
+        HTMLEvents htmlEvents;
 
-    //[Parameter] RenderFragment ChildContent { get; set; }
     [Parameter] string Text { get; set; }
     [Parameter] string AriaLabel { get; set; }
     [Parameter] string AriaDescription { get; set; }
@@ -14,20 +16,33 @@
     [Parameter] bool Disabled{ get; set; }
     [Parameter] bool Toggle { get; set; }
 
+    [Parameter] Action OnClick { get; set; }
 
     override protected async Task OnAfterRenderAsync()
     {
-        var buttonProps = new ButtonProps()
+        if (buttonProps == null)
         {
-            text = this.Text,
-            ariaLabel = this.AriaLabel,
-            ariaDescription = this.AriaDescription,
-            ariaHidden = this.AriaHidden,
-            Checked = this.Checked,
-            disabled=this.Disabled,
-            toggle=this.Toggle
-    };
-    await JSRuntime.InvokeAsync<object>("reactFabric.primaryButton", buttonRef, buttonProps);
-    await base.OnAfterRenderAsync();
-}
+            buttonProps = new ButtonProps()
+            {
+                text = this.Text,
+                ariaLabel = this.AriaLabel,
+                ariaDescription = this.AriaDescription,
+                ariaHidden = this.AriaHidden,
+                Checked = this.Checked,
+                disabled = this.Disabled,
+                toggle = this.Toggle
+            };
+        }
+        if (htmlEvents == null)
+        {
+            htmlEvents = new HTMLEvents()
+            {
+                ClickAction = this.OnClick
+            };
+        }
+        await JSRuntime.InvokeAsync<object>("reactFabric.primaryButton", buttonRef, new DotNetObjectRef(htmlEvents), buttonProps);
+        await base.OnAfterRenderAsync();
+    }
+
+   
 }

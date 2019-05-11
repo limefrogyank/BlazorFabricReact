@@ -16219,13 +16219,14 @@ Object(lib["u" /* mergeStyles */])({
     }
 });
 window.reactFabric = {
+    // just an initial test to show React components loading in Blazor components
     reactRenderApp: function () {
         react_dom_default.a.render(react_default.a.createElement(Customizer_Customizer, tslib_es6["a" /* __assign */]({}, FluentCustomizations),
             react_default.a.createElement(App, null)), document.getElementById('app'));
     },
-    primaryButton: function (elementRef, buttonProps) {
+    primaryButton: function (elementRef, dotNetHTMLEvents, buttonProps) {
         react_dom_default.a.render(react_default.a.createElement(Customizer_Customizer, tslib_es6["a" /* __assign */]({}, FluentCustomizations),
-            react_default.a.createElement(PrimaryButton_PrimaryButton, tslib_es6["a" /* __assign */]({}, buttonProps))), elementRef);
+            react_default.a.createElement(PrimaryButton_PrimaryButton, tslib_es6["a" /* __assign */]({}, buttonProps, { onClick: function () { return dotNetHTMLEvents.invokeMethodAsync('OnClick'); } }))), elementRef);
     }
 };
 

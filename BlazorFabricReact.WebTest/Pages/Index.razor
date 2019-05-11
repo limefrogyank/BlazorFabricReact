@@ -4,6 +4,15 @@
 
 Welcome to your new app.
 
-<PrimaryButton Text="Test Button"></PrimaryButton>
+<PrimaryButton Text="Test Button" OnClick="@OnClick"></PrimaryButton>
 
 <ReactComponent></ReactComponent>
+
+@functions{
+
+
+    void OnClick()
+    {
+        System.Diagnostics.Debug.WriteLine("Clicked button via React component");
+    }
+}
