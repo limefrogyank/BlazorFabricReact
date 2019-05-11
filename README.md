@@ -11,7 +11,8 @@ Here's how I managed to do it.  There's a Blazor web app and a Blazor component 
 
 1.  I suck at web development.  I need help making a proper webpack.config.json file that will minify everything **but** the functions I'm using as component factories.  Otherwise the javascript file will get too big.
 2.  Ideally, there would be some type of script that checks what components you are actually using and only includes those into the javascript file.  
-3.  I haven't done any performance checks.  No idea how well this will work in the long run, but it seems to work right now.
+3.  I have no idea how to make `npm run build` run and copy the result on every blazor build.  It's all manual for now.
+4.  I haven't done any performance checks.  No idea how well this will work in the long run, but it seems to work right now.
 
 ## Can you help?
 
