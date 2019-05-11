@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28902.138
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorFabricReact", "BlazorFabricReact\BlazorFabricReact.csproj", "{4E063032-B967-42F1-8715-23C80002709A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorFabricReact.WebTest", "BlazorFabricReact.WebTest\BlazorFabricReact.WebTest.csproj", "{B086DB7D-D39E-4DB0-9225-C72480E7A613}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E063032-B967-42F1-8715-23C80002709A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E063032-B967-42F1-8715-23C80002709A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E063032-B967-42F1-8715-23C80002709A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E063032-B967-42F1-8715-23C80002709A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B086DB7D-D39E-4DB0-9225-C72480E7A613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B086DB7D-D39E-4DB0-9225-C72480E7A613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B086DB7D-D39E-4DB0-9225-C72480E7A613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B086DB7D-D39E-4DB0-9225-C72480E7A613}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53CAB3B5-9761-44B7-8F9A-A583A3C607E0}
+	EndGlobalSection
+EndGlobal

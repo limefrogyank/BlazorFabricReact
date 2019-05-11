@@ -1,0 +1,33 @@
+﻿@inject Microsoft.JSInterop.IJSRuntime  JSRuntime
+
+<div ref="buttonRef"></div>
+
+@functions{
+    ElementRef buttonRef;
+
+    //[Parameter] RenderFragment ChildContent { get; set; }
+    [Parameter] string Text { get; set; }
+    [Parameter] string AriaLabel { get; set; }
+    [Parameter] string AriaDescription { get; set; }
+    [Parameter] bool AriaHidden { get; set; }
+    [Parameter] bool Checked { get; set; }
+    [Parameter] bool Disabled{ get; set; }
+    [Parameter] bool Toggle { get; set; }
+
+
+    override protected async Task OnAfterRenderAsync()
+    {
+        var buttonProps = new ButtonProps()
+        {
+            text = this.Text,
+            ariaLabel = this.AriaLabel,
+            ariaDescription = this.AriaDescription,
+            ariaHidden = this.AriaHidden,
+            Checked = this.Checked,
+            disabled=this.Disabled,
+            toggle=this.Toggle
+    };
+    await JSRuntime.InvokeAsync<object>("reactFabric.primaryButton", buttonRef, buttonProps);
+    await base.OnAfterRenderAsync();
+}
+}

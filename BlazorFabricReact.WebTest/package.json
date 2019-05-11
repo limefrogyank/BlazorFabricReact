@@ -1,0 +1,14 @@
+{
+  "name": "blazorfabricreact.webtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wwwroot/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "office-ui-fabric-react": "^6.176.3"
+  }
+}
