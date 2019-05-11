@@ -9,7 +9,6 @@
   <ItemGroup>
     <Content Remove="wwwroot\00c49b0fb344ae5f83bc7ed50f8c7059.png" />
     <Content Remove="wwwroot\7e67a9aeb90883d424cb6f966b974136.png" />
-    <Content Remove="wwwroot\bundle.js" />
     <Content Remove="wwwroot\index_bundle.js" />
     <Content Remove="wwwroot\index_bundle.js.map" />
   </ItemGroup>
@@ -17,7 +16,6 @@
   <ItemGroup>
     <None Include="wwwroot\00c49b0fb344ae5f83bc7ed50f8c7059.png" />
     <None Include="wwwroot\7e67a9aeb90883d424cb6f966b974136.png" />
-    <None Include="wwwroot\bundle.js" />
     <None Include="wwwroot\index_bundle.js" />
     <None Include="wwwroot\index_bundle.js.map" />
   </ItemGroup>
