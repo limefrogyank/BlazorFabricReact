@@ -1,5 +1,10 @@
 # Use Fabric React components in your Blazor app!
 
+## Demo
+https://blazorfabricreactdemo.azurewebsites.net/
+
+## How?
+
 Here's how I managed to do it.  There's a Blazor web app and a Blazor component library in this repo.  Within the Blazor component library in a subdirectory, I used the dotnet CLI to create a simple React app.  
 
 1.  The React app has been modified.  Instead of immediately creating the `<App>...</App>` component and everything in it, I'm creating factory functions that make the individual React components.  These are available on the global (window) property `reactFabric`.  Take a look at `BlazorFabricReact/BlazorFabricReact/src/index.tsx` to see some examples.  (There aren't many yet.)
